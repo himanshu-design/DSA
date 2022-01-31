@@ -1,0 +1,33 @@
+tell number can be power of two or not
+count the set bits in the given input if = 1 then it is power of two
+#include<iostream>
+using namespace std;
+int poweroftwo(int n)
+{    
+    int b=n;
+    int c=0;
+    while(n!=0)   ( run till number =0)
+    {
+        if(n&1)   ( to take out the set bits or 1 bit )
+        {
+            c=c+1;  (for calculating the no of set bits )
+        }
+        n=n>>1;
+    }
+    if(c==1)               (if  c=1 that means only one set bit is present  then only power of two else not )
+    {
+        cout<<b<<endl;
+    }
+    else
+    {
+        cout<<"not"<<endl;
+    }
+    return 0;
+}
+int main()
+{
+    int a;
+    cin>>a;
+    poweroftwo(a);
+    
+}
